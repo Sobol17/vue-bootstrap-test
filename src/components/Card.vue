@@ -7,7 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <div class="card" style="width: 360px">
+  <div class="card card-block">
     <div class="card-body body">
       <div class="card-title text-primary fw-medium fs-5">{{ title }}</div>
       <div class="card-text">{{ text }}</div>
@@ -17,6 +17,9 @@ const props = defineProps({
 </template>
 
 <style scoped lang="scss">
+.card-block {
+  width: 360px
+}
 .sub {
   color: grey;
   font-size: 14px;
@@ -25,5 +28,11 @@ const props = defineProps({
 .body {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 375px) {
+  .card-block {
+    width: 100%;
+  }
 }
 </style>

@@ -34,7 +34,7 @@ onMounted(async () => {
   <div class="container">
     <h1 class="text-center pt-5">Vue + Bootstrap test</h1>
     <Search v-model="searchString"/>
-    <div class="row mt-5 gap-4">
+    <div class="row mt-5 gap-4 justify-content-center flex">
       <Card v-for="(post) in postsWithAuthor" :title="post.title" :text="post.body" :author="post.author"/>
     </div>
   </div>
@@ -43,5 +43,11 @@ onMounted(async () => {
 <style lang="scss">
 body  {
   background-color: var(--bs-light) !important;
+}
+
+@media (max-width: 375px) {
+  .flex {
+    margin: 0;
+  }
 }
 </style>
